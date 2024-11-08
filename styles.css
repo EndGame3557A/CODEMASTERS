@@ -112,6 +112,7 @@ nav ul li a {
     font-size: 15px;
     padding: 7px 7px;
     border-radius: 3px;
+    text-decoration: none;
     text-transform: uppercase ;
 }
 
@@ -302,8 +303,8 @@ li a.active, li a:hover {
 .team-member1 {
     flex: 1;
     width: 100px;
-    height: 400px;
-    background-image: url("WhatsApp Image 2024-10-23 at 8.54.14 PM.jpeg");
+    height: 500px;
+    background-image: url("WhatsApp Image 2024-10-23 at 8.30.26 PM.jpeg");
     background-size: cover;
     border-radius: 15px;
     overflow: hidden;
@@ -313,8 +314,8 @@ li a.active, li a:hover {
 .team-member2 {
     flex: 1;
     width: 100px;
-    height: 400px;
-    background-image: url("WhatsApp Image 2024-10-23 at 8.53.17 PM.jpeg");
+    height: 500px;
+    background-image: url("WhatsApp Image 2024-11-01 at 9.22.46 AM.jpeg");
     background-size: cover;    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -323,8 +324,8 @@ li a.active, li a:hover {
 .team-member3 {
     flex: 1;
     width: 100px;
-    height: 400px;
-    background-image: url("WhatsApp Image 2024-10-23 at 9.08.16 PM.jpeg");
+    height: 500px;
+    background-image: url("WhatsApp Image 2024-11-01 at 9.38.27 AM.jpeg");
     background-size: cover;    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -333,8 +334,8 @@ li a.active, li a:hover {
 .team-member4 {
     flex: 1;
     width: 100px;
-    height: 400px;
-    background-image: url("WhatsApp Image 2024-10-23 at 9.00.51 PM.jpeg");
+    height: 500px;
+    background-image: url("WhatsApp Image 2024-10-23 at 8.15.39 PM.jpeg");
     background-size: cover;    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -343,9 +344,9 @@ li a.active, li a:hover {
 .team-member5 {
     flex: 1;
     width: 100px;
-    height: 400px;
+    height: 500px;
     border-radius: 15px;
-    background-image: url("WhatsApp Image 2024-10-23 at 9.04.07 PM.jpeg");
+    background-image: url("WhatsApp Image 2024-11-01 at 9.23.31 AM.jpeg");
     background-size: cover;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -780,4 +781,217 @@ body {
     color: #fff;
     padding: 20px 20px;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.body-contact {
+    display: flex;
+    /* justify-content: center; */
+    background-image: linear-gradient(to right, black, rgb(106, 106, 106), rgb(184, 184, 184));
+    background-size: cover;
+}
+
+.informacion {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    grid-template-columns: repeat(2,50%);
+    padding-top: 50px;
+    gap: 50px;
+    width: 1000px;
+    font-size: 20px;
+    margin-left: 340px;
+
+}
+
+.box-info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-info > h1 {
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.data > p {
+    font-size: 1rem;
+}
+
+.data > p > i {
+    color: #c3d0d7;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.links > a {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background: #132128;
+    text-align: center;
+    transition: .1s;
+    border-radius: 20px;
+}
+
+.links > a > i {
+    color: #fff;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box > input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    background: rgb(255, 255, 255);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: #000000;
+    border-radius: 10px;
+}
+
+.input-box > input:focus,
+.input-box > textarea:focus{
+    border-bottom: 3px solid rgb(162, 40, 65);
+    animation: shake .2s;
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+    color: #a3a3a3;
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+    color: transparent;
+}
+
+.input-box > textarea {
+    width: 100%;
+    height: 130px;
+    background: rgb(255, 255, 255);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: #000000;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.input-box > i {
+    color: rgba(255 255 255 / .1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    transition: .3s;
+}
+
+.input-box > input:focus ~ i {
+    color: rgb(162, 40, 65);
+}
+
+form > button {
+    background: rgb(125, 66, 66);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+form > button:hover,
+.links > a:hover {
+    background: rgba(237, 200, 200, 0.79);
+    color: black;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+@media screen and (max-width:600px) {
+    .informacion {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box-info {
+        gap: 15px;
+    }
+
+    .box-info > h1 {
+        font-size: 1.5rem;
+    }
 }
