@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(249, 228, 149, .6);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #3c3c97;
+}
+
+.icons {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.icons i {
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 100px;
+    color: #4f4fcd;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.icons i:hover {
+    background-color: #c7c7f3;
+    color: #fff;
+}
+
+@media screen and (max-width:630px) {
+    .icons {
+        margin: 10px;
+    }
+}
+
+form {
+    margin: 70px 170px ;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    background-color: rgba(251, 231, 158, 0.6);;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+    color: #40408f;
+    font-size: 35px;
+}
+
+label {
+    color: #40408f;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    padding: 15px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #EDFFF0;
+    border: 2px solid #F0FAF1;
+    color: #283629;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #b5cab6;
+}
+
+.form-text {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-text a {
+    color: #3331ae;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 16px;
+    border: 0;
+    border-radius: 25px;
+    background-color: #7487d4;
+    box-shadow: 0 0 20px rgba(3, 11, 255, 0.4);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #072ce4;
+    color: white;
+}
+
+
+</style>
+<body>
+    <!-- Sección Redes Sociales -->
+    <div class="information" id="redes-sociales">
+        <h1 class="titulo">Encuéntranos en</h1>
+        <div class="icons">
+            <a target="_blank" href="https://www.bing.com/ck/a?!&&p=32670df5c4053c5aJmltdHM9MTcxODU4MjQwMCZpZ3VpZD0wMWU2ZmEyMy04OTczLTYyNWQtMzMxYS1lOTU1ODhmZDYzNWImaW5zaWQ9NTIwMQ&ptn=3&ver=2&hsh=3&fclid=01e6fa23-8973-625d-331a-e95588fd635b&psq=facebook&u=a1aHR0cHM6Ly9lcy1sYS5mYWNlYm9vay5jb20v&ntb=1"><i class="bi bi-facebook"></i></a>
+            <a target="_blank" href="https://www.bing.com/ck/a?!&&p=2ef9e5f68a190932JmltdHM9MTcxODU4MjQwMCZpZ3VpZD0wMWU2ZmEyMy04OTczLTYyNWQtMzMxYS1lOTU1ODhmZDYzNWImaW5zaWQ9NTE5NA&ptn=3&ver=2&hsh=3&fclid=01e6fa23-8973-625d-331a-e95588fd635b&psq=ins&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1"><i class="bi bi-instagram"></i></a>
+            <a target="_blank" href="https://www.bing.com/ck/a?!&&p=f771801bc12d8a27JmltdHM9MTcxODU4MjQwMCZpZ3VpZD0wMWU2ZmEyMy04OTczLTYyNWQtMzMxYS1lOTU1ODhmZDYzNWImaW5zaWQ9NTE5OQ&ptn=3&ver=2&hsh=3&fclid=01e6fa23-8973-625d-331a-e95588fd635b&psq=x+twitter&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9AWA&ntb=1"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        
+        <div class="contact">
+
+            <form>
+
+                <h2>Contáctenos</h2>
+
+                <div class="input-group">
+
+                    <label for="name">Nombre</label>
+                    <input required type="text" name="name" id="name" placeholder="Nombre">
+
+                    <label for="phone">Teléfono</label>
+                    <input required type="tel" name="phone" id="phone" placeholder="Teléfono">
+
+                    <label for="email">Email</label>
+                    <input required type="email" name="" id="email" placeholder="Correo electrónico">
+
+                    <label for="message">Mensaje</label>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="|"></textarea>
+
+                    <div class="form-text">
+                        <a href="#">Politica de privacidad</a>
+                        <a href="#">Terminos y Condiciones</a>
+                    </div>
+
+                    <input class="btn" type="submit" value="Enviar">
+
+                </div>
+
+            </form>
+           
+
+        </div>
+    </div>
+</body>
+</html>

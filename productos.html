@@ -1,68 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODEMASTERS</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<center>
 
-    <link rel="icon" href="codemasters.jpeg">
-</head>
-<header class="headernav">
-    <!-- <img class="VENECIA2" src="codemasters.jpeg" alt="logo">
-    <a href="bienvenido.html" class="logoj">CODEMASTERS</a> -->
-    <!-- El botón del menú hamburguesa -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Mascota Feliz</title>
+        <link rel="stylesheet" href="productos.css">
+    </head>
 
-<!-- El menú hamburguesa -->
+    <style>
+.slider {
+    width: 60%;
+    overflow: hidden;
+    background-color: #ececec;
+    border: 5px rgb(255, 109, 12) solid;
+    border-radius: 20px;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    flex: 0 0 100%;
+    
+}
+.slide img {
+    width: 95%;
+    display: block;
+}
+#pro1,#pro2,#pro3,#pro4,#pro5{
+    width: 600px;
+    height: 330px;
+}
+.slide p{
+    font-size: 20px;
+}
+.cuerslide {
+    padding: 5px;
+    background-color: rgba(249, 228, 149, .6)
+}
+.titulooo {
+    color: #a87944;
+    text-shadow: 2px 2px 5px black;
+    font-size: 30px;
+}
+    </style>
 
-
-<nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="bi bi-list"></i>
-    </label>
-    <a href="#" class="enlace">
-        <img src="logo (1).jpeg" alt="" class="logo">
-
-    </a>
-
-    <ul>
-        <a href="bienvenido.html" class="logoj">Code Masters</a>
-
-
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contactenos.html">Contactenos</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="equipo.html">Nuestro Equipo</a></li>
-    </ul>
-</nav>
-</header>
-<body class="body-productos">
-
-    <div class="container">
-        <div class="column1">
-            <div class="info">ESTA ES UNA PIZZERIA UBICADA EN TULUA, FUE NUESTRO PRIMER PROYECTO EL CUAL NOS AYUDO MUCHO A CONOCER CUALES SON NUESTRAS CUALIDADES DENTRO DE LA PROGRAMACION; SI QUIERES CONOCER MÁS, HAZ CLICK EN EL BOTON</div>
-            <div class="mano">👉🏻</div>
-            <a href="PAGINA WEB VENECIA/bienvenido.html" class="seccion1">PIZZERIA VENECIA</a>
+    <body class="cuerslide">
+        <h1 class="titulooo">PRODUCTOS QUE OFRECEMOS</h1>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="pro1.jpg" alt="Slide 1" id="pro1">
+                    <p>BIOSPORINE 3    30g</p>
+                    <P>$65.000</P>
+                </div>
+                <div class="slide">
+                    <img src="pro2.jpg" alt="Slide 2" id="pro2">
+                    <p>METRI-CEF 3    30ml</p>
+                    <P>$150.000</P>
+                </div>
+                <div class="slide">
+                    <img src="pro3.jpg" alt="Slide 3" id="pro3">
+                    <p>COMIDA PARA PERRO Y GATO</p>
+                    <P>$50.000 - $150.000</P>
+                </div>
+                <div class="slide">
+                    <img src="pro4.jpg" alt="Slide 4" id="pro4">
+                    <p>JERINGAS Y TUBOS DE ALMECENAMIENTO DE MEDICAMENTO PARA ANIMALES</p>
+                    <P>$15.000</P>
+                </div>
+                <div class="slide">
+                    <img src="pro5.jpg" alt="Slide 5" id="pro5">
+                    <p>CUERDA PARA PASEAR MASCOTAS</p>
+                    <P>$10.000</P>
+                </div>
+            </div>
         </div>
-        
-        <div class="column2">
-            <div class="info">AQUI NOSOTROS LE AYUDAMOS A UNOS COMPAÑEROS DEL GRADO 11-2 A REALIZAR SU PAGINA, AQUI PROBAMOS NUESTROS CONOCIMIENTOS SOBRE PAGINAS WEB, SI QUIERES SABER CUAL FUE EL RESULTADO, HAZ CLICK AQUI</div>
-            <div class="mano">👈🏻</div>
-            <a href="PAGINA MAGIC NAILS/bienvenido.html" class="seccion2">MAGIC NAILS</a>
-        </div>
-    </div>
 
-
-
-</body>
-
-
-
-
-<script src="menu.js"></script>
-<script src="index.js"></script>
-
+        <script src="productos.js"></script>
+    </body>
+</center>
 
 </html>
