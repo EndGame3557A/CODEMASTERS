@@ -24,7 +24,7 @@ function loguear(){
 
         else if(user=="admin" && pass=="4321")
         {
-            location.href="admin.html";
+            window.location.href="admin (1).html";
         }
 
         else
