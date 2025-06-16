@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Educa - Inteligencia Artificial en Educación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ia-azul: #1a237e;
+            --ia-celeste: #00e5ff;
+            --ia-verde: #00c853;
+            --ia-gris: #eceff1;
+            --ia-blanco: #fff;
+            --ia-morado: #7c4dff;
+        }
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--ia-gris);
+            color: var(--ia-azul);
+        }
+        .pantalla {
+            display: none;
+            max-width: 420px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: var(--ia-blanco);
+            box-shadow: 0 0 16px #bdbdbd;
+            padding: 24px 16px 90px 16px;
+            position: relative;
+        }
+        .pantalla.activa { display: block; }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--ia-celeste), var(--ia-morado));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ia-blanco);
+            font-size: 2em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px #bdbdbd;
+        }
+        .slogan {
+            font-size: 1.1em;
+            color: var(--ia-verde);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        h1, h2 {
+            margin: 0.5em 0;
+            color: var(--ia-azul);
+        }
+        input, button, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #bdbdbd;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        button {
+            background: linear-gradient(90deg, var(--ia-celeste), var(--ia-morado));
+            color: var(--ia-blanco);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover { background: linear-gradient(90deg, var(--ia-morado), var(--ia-celeste)); }
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0; right: 0;
+            background: var(--ia-blanco);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 8px 0;
+            max-width: 420px;
+            margin: 0 auto;
+            box-shadow: 0 -2px 10px #bdbdbd;
+            z-index: 10;
+        }
+        nav button {
+            width: 60px;
+            background: none;
+            color: var(--ia-azul);
+            border-radius: 20px;
+            font-size: 0.9em;
+            padding: 8px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: none;
+        }
+        nav img {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 2px;
+        }
+        .contenido {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 14px 0;
+            box-shadow: 0 1px 6px #bdbdbd33;
+        }
+        .img-ia {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 16px;
+            margin: 0 auto 18px auto;
+            display: block;
+            box-shadow: 0 2px 12px #bdbdbd55;
+        }
+        .perfil-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid var(--ia-celeste);
+            box-shadow: 0 2px 8px #bdbdbd;
+        }
+        .busqueda-icon {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+        ul {
+            padding-left: 18px;
+        }
+        @media (max-width: 500px) {
+            .pantalla { max-width: 100vw; box-shadow: none; }
+            nav { max-width: 100vw; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div class="pantalla activa" id="inicio">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png" alt="IA" style="width:36px;height:36px;">
+            </div>
+            <div>
+                <strong>IA Educa</strong>
+            </div>
+        </div>
+        <div class="slogan">Innovando el aprendizaje con Inteligencia Artificial</div>
+        <img class="img-ia" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="IA en educación">
+        <h1>Bienvenido</h1>
+        <p>Descubre cómo la IA está transformando colegios y universidades.</p>
+        <button onclick="mostrar('registro')">Comenzar</button>
+    </div>
+
+    <!-- Pantalla de Registro de usuario -->
+    <div class="pantalla" id="registro">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png" alt="IA" style="width:36px;height:36px;">
+            </div>
+            <div><strong>IA Educa</strong></div>
+        </div>
+        <h2>Registro</h2>
+        <form onsubmit="registrarUsuario(event)">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="pass" placeholder="Contraseña" required>
+            <select id="tipoUsuario" required>
+                <option value="">Tipo de usuario</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Profesor">Profesor</option>
+                <option value="Directivo">Directivo</option>
+            </select>
+            <button type="submit">Registrarse</button>
+        </form>
+        <button onclick="mostrar('inicio')">Volver</button>
+    </div>
+
+    <!-- Pantalla de Menú -->
+    <!-- Pantalla de Menú -->
+    <div class="pantalla" id="menu">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png" alt="IA" style="width:36px;height:36px;">
+            </div>
+            <div><strong>IA Educa</strong></div>
+        </div>
+        <div class="slogan">Innovando el aprendizaje con Inteligencia Artificial</div>
+        <img class="img-ia" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Menú IA">
+        <h2>Menú Principal</h2>
+        <!-- Barra de búsqueda agregada aquí -->
+        <input type="text" id="buscarInputMenu" placeholder="Buscar en IA Educa..." oninput="buscarContenidoMenu()">
+        <div id="resultadosBusquedaMenu"></div>
+        <button onclick="mostrar('busqueda')">Buscar IA en Educación</button>
+        <button onclick="mostrar('contenido')">Ver Contenido</button>
+        <button onclick="mostrar('perfil')">Mi Perfil</button>
+        <button onclick="mostrar('inicio')">Cerrar sesión</button>
+    </div>
+
+    <!-- Pantalla de Búsqueda -->
+    <div class="pantalla" id="busqueda">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png" alt="IA" style="width:36px;height:36px;">
+            </div>
+            <div><strong>IA Educa</strong></div>
+        </div>
+        <img class="busqueda-icon" src="https://img.icons8.com/fluency/48/000000/search.png" alt="Buscar">
+        <h2>Búsqueda</h2>
+        <input type="text" id="buscarInput" placeholder="Buscar aplicaciones de IA..." oninput="buscarContenido()">
+        <div id="resultadosBusqueda"></div>
+        <button onclick="mostrar('menu')">Volver</button>
+    </div>
+
+    <!-- Pantalla de Perfil de Usuario -->
+    <div class="pantalla" id="perfil">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png" alt="IA" style="width:36px;height:36px;">
+            </div>
+            <div><strong>IA Educa</strong></div>
+        </div>
+        <h2>Mi Perfil</h2>
+        <img class="perfil-img" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=200&q=80" alt="Perfil">
+        <div class="contenido">
+            <strong>Nombre:</strong> <span id="perfilNombre"></span><br>
+            <strong>Email:</strong> <span id="perfilEmail"></span><br>
+            <strong>Tipo:</strong> <span id="perfilTipo"></span>
+        </div>
+        <button onclick="mostrar('menu')">Volver</button>
+    </div>
+
+    <!-- Pantalla de Contenido -->
+    <div class="pantalla" id="contenido">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png" alt="IA" style="width:36px;height:36px;">
+            </div>
+            <div><strong>IA Educa</strong></div>
+        </div>
+        <img class="img-ia" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="IA en educación">
+        <h2>IA en Colegios y Universidades</h2>
+        <div class="contenido">
+            <ul>
+                <li><strong>Asistentes virtuales:</strong> Ayudan a responder dudas y personalizar el aprendizaje.</li>
+                <li><strong>Corrección automática:</strong> Evaluación rápida y objetiva de tareas y exámenes.</li>
+                <li><strong>Detección de plagio:</strong> Herramientas que aseguran la originalidad de los trabajos.</li>
+                <li><strong>Recomendaciones personalizadas:</strong> Sugerencias de recursos y actividades según el progreso del estudiante.</li>
+                <li><strong>Analítica educativa:</strong> Uso de datos para mejorar la enseñanza y detectar dificultades a tiempo.</li>
+                <li><strong>Inclusión:</strong> Apoyos para estudiantes con necesidades especiales (traducción, lectura, etc).</li>
+            </ul>
+        </div>
+        <button onclick="mostrar('menu')">Volver</button>
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <nav>
+        <button onclick="mostrar('menu')">
+            <img src="https://img.icons8.com/fluency/48/000000/home.png" alt="Menú"><span>Menú</span>
+        </button>
+        <button onclick="mostrar('busqueda')">
+            <img src="https://img.icons8.com/fluency/48/000000/search.png" alt="Buscar"><span>Buscar</span>
+        </button>
+        <button onclick="mostrar('contenido')">
+            <img src="https://img.icons8.com/fluency/48/000000/artificial-intelligence.png" alt="Contenido"><span>IA</span>
+        </button>
+        <button onclick="mostrar('perfil')">
+            <img src="https://img.icons8.com/fluency/48/000000/user-male-circle.png" alt="Perfil"><span>Perfil</span>
+        </button>
+    </nav>
+
+    <script>
+        // Navegación entre pantallas
+        function mostrar(id) {
+            document.querySelectorAll('.pantalla').forEach(p => p.classList.remove('activa'));
+            document.getElementById(id).classList.add('activa');
+        }
+
+        // Registro simulado
+        function registrarUsuario(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const tipo = document.getElementById('tipoUsuario').value;
+            localStorage.setItem('ia_nombre', nombre);
+            localStorage.setItem('ia_email', email);
+            localStorage.setItem('ia_tipo', tipo);
+            document.getElementById('perfilNombre').textContent = nombre;
+            document.getElementById('perfilEmail').textContent = email;
+            document.getElementById('perfilTipo').textContent = tipo;
+            mostrar('menu');
+        }
+
+        // Mostrar perfil al entrar
+        document.getElementById('perfil').addEventListener('click', function() {
+            document.getElementById('perfilNombre').textContent = localStorage.getItem('ia_nombre') || '';
+            document.getElementById('perfilEmail').textContent = localStorage.getItem('ia_email') || '';
+            document.getElementById('perfilTipo').textContent = localStorage.getItem('ia_tipo') || '';
+        });
+
+        // Contenido de ejemplo para búsqueda
+        const baseContenido = [
+            {titulo: "Chatbots educativos", desc: "Asistentes virtuales para responder dudas."},
+            {titulo: "Corrección automática", desc: "IA que califica tareas y exámenes."},
+            {titulo: "Detección de plagio", desc: "Herramientas para asegurar originalidad."},
+            {titulo: "Recomendaciones personalizadas", desc: "Sugerencias de recursos según el avance."},
+            {titulo: "Analítica educativa", desc: "Datos para mejorar la enseñanza."},
+            {titulo: "Inclusión y accesibilidad", desc: "IA para ayudar a estudiantes con necesidades especiales."}
+        ];
+
+        function buscarContenido() {
+            const q = document.getElementById('buscarInput').value.toLowerCase();
+            const resultados = baseContenido.filter(item =>
+                item.titulo.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q)
+            );
+            let html = "";
+            if (resultados.length === 0) {
+                html = "<p>No se encontraron resultados.</p>";
+            } else {
+                html = "<ul>";
+                resultados.forEach(item => {
+                    html += `<li><strong>${item.titulo}:</strong> ${item.desc}</li>`;
+                });
+                html += "</ul>";
+            }
+            document.getElementById('resultadosBusqueda').innerHTML = html;
+        }
+    </script>
+</body>
+</html>
